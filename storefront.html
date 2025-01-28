@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Your Slice</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fef8f3;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    select, textarea, button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      background: #ff6363;
+      color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background: #e55555;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ff6363;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Customize Your Slice</h1>
+    <p>Price: <strong>45 AED</strong></p>
+  </header>
+  <main>
+    <form id="customizeForm">
+      <label for="base">Choose your base:</label>
+      <select id="base" name="base">
+        <option value="chocolate">Chocolate</option>
+        <option value="vanilla">Vanilla</option>
+        <option value="red velvet">Red Velvet</option>
+      </select>
+
+      <label for="filling">Pick your filling:</label>
+      <select id="filling" name="filling">
+        <option value="cream">Whipped Cream</option>
+        <option value="ganache">Chocolate Ganache</option>
+        <option value="berry">Berry Compote</option>
+      </select>
+
+      <label for="message">Add a personalized message:</label>
+      <textarea id="message" name="message" rows="3" placeholder="e.g., Happy Birthday!"></textarea>
+
+      <button type="submit">Order My Slice</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2025 Slice of Delight</p>
+  </footer>
+  <script>
+    document.getElementById('customizeForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const base = document.getElementById('base').value;
+      const filling = document.getElementById('filling').value;
+      const message = document.getElementById('message').value;
+
+      const orderDetails = `Base: ${base}, Filling: ${filling}, Message: "${message}"`;
+      window.location.href = `/checkout.html?order=${encodeURIComponent(orderDetails)}`;
+    });
+  </script>
+</body>
+</html>

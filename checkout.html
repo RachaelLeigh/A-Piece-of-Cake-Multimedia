@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fef8f3;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+    }
+    main {
+      text-align: center;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      background: #ff6363;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+    button:hover {
+      background: #e55555;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ff6363;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+  <main>
+    <h2>Your Order</h2>
+    <p id="orderDetails">Loading...</p>
+    <button id="confirmOrderButton">Confirm Order</button>
+  </main>
+  <footer>
+    <p>&copy; 2025 Slice of Delight</p>
+  </footer>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const order = params.get('order');
+    document.getElementById('orderDetails').textContent = order || 'No order found.';
+
+    document.getElementById('confirmOrderButton').addEventListener('click', () => {
+      alert('Thank you for your order!');
+      window.location.href = '/contact.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fef8f3;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+    }
+    main {
+      text-align: center;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    textarea, input, button {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    button {
+      background: #ff6363;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e55555;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ff6363;
+      color: white;
+    }
+    .back-button {
+      background: #6666ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+    .back-button:hover {
+      background: #5757e6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <p>We’re happy to hear from you!</p>
+  </header>
+  <main>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <button class="back-button" id="backToMainButton">Back to Main Page</button>
+  </main>
+  <footer>
+    <p>&copy; 2025 Slice of Delight</p>
+  </footer>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message!');
+    });
+
+    document.getElementById('backToMainButton').addEventListener('click', () => {
+      window.location.href = '/index.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Slice of Delight</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Slice of Delight</h1>
+    <p>Relax and create your perfect slice.</p>
+  </header>
+
+  <main>
+    <div class="button-container">
+      <button id="orderCake">Order Cake Slice</button>
+      <button id="playGame">Play</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Slice of Delight | Made with ❤️</p>
+  </footer>
+
+  <script>
+    document.getElementById('orderCake').addEventListener('click', () => {
+      window.location.href = '/storefront.html';
+    });
+
+    document.getElementById('playGame').addEventListener('click', () => {
+      window.location.href = '/decorate.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decorate Your Cake</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Decorate Your Cake</h1>
+  </header>
+
+  <main>
+    <div id="cakeContainer">
+      <canvas id="cakeCanvas"></canvas>
+    </div>
+
+    <div id="toppingBar">
+      <div class="topping" data-type="chocolate">🍫</div>
+      <div class="topping" data-type="strawberry">🍓</div>
+      <div class="topping" data-type="sprinkles">✨</div>
+      <div class="topping" data-type="cherry">🍒</div>
+    </div>
+
+    <div class="controls">
+      <button id="resetCake">Reset</button>
+      <button id="saveCake">Save</button>
+      <button onclick="window.location.href='storefront.html'">Back</button>
+    </div>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
